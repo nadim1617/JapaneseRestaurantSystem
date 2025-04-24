@@ -1,16 +1,12 @@
 package restaurant;
 
-
-
 import java.io.Console;
 import java.sql.*;
 import java.util.*;
 
-
-
 public class JapaneseRestaurant {
 
-    // Database connection
+    // Database connectio
     public static Connection getConnection() {
         try {
             String url = "jdbc:mysql://localhost:3306/restaurant_db";
@@ -24,7 +20,6 @@ public class JapaneseRestaurant {
         }
     }
 
-    
     
     // Clear screen method
     public static void clearScreen() {
@@ -41,7 +36,6 @@ public class JapaneseRestaurant {
     }
 
     
-    
     // View menu items
     public static void viewMenu() {
         try (Connection conn = getConnection();
@@ -56,7 +50,6 @@ public class JapaneseRestaurant {
         }
     }
 
-    
     
     // Place order
     public static void placeOrder(String name, Scanner sc) {
@@ -143,7 +136,6 @@ public class JapaneseRestaurant {
     }
 
     
-    
     // View user order history
     public static void viewOrderHistory(String customerName) {
         try (Connection conn = getConnection()) {
@@ -160,7 +152,6 @@ public class JapaneseRestaurant {
     }
 
     
-    
     // Admin login check
     public static boolean adminLogin(String username, String password) {
         try (Connection conn = getConnection()) {
@@ -175,8 +166,7 @@ public class JapaneseRestaurant {
         }
     }
 
-    
-    
+     
     // Add menu item
     public static void addMenuItem(Scanner sc) {
         try (Connection conn = getConnection()) {
@@ -197,7 +187,6 @@ public class JapaneseRestaurant {
         }
     }
 
-    
     
     // Remove menu item
     public static void removeMenuItem(Scanner sc) {
@@ -221,7 +210,6 @@ public class JapaneseRestaurant {
     }
     
     
-    
     public static void showLoadingBar() {
         System.out.print("Loading ");
         for (int i = 0; i <= 20; i++) {
@@ -242,7 +230,6 @@ public class JapaneseRestaurant {
     }
 
     
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
